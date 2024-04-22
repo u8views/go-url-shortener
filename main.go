@@ -30,7 +30,7 @@ func runProduction(handler http.Handler) {
 	certManager := autocert.Manager{
 		Prompt:     autocert.AcceptTOS,
 		HostPolicy: autocert.HostWhitelist("shortener.u8views.com", "dev.shortener.u8views.com"),
-		Cache:      autocert.DirCache("/var/lib/u8views/go-url-shortener/tls-certificates/"),
+		Cache:      autocert.DirCache("/var/lib/tls-certificates/data/"),
 	}
 
 	server := &http.Server{
