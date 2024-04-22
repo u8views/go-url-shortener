@@ -13,6 +13,6 @@ app-start:
 	shortener-server &
 
 app-stop:
-	pkill shortener-server || echo "shortener-server already stopped"
+	pkill -f shortener-server || echo "shortener-server already stopped"
 
 app-restart: tls-certificates app-build app-stop app-start
