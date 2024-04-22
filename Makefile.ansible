@@ -1,0 +1,8 @@
+ansible-ping:
+	ansible -i ./scripts/ansible/hosts.txt all -m ping
+
+ansible-git-pull:
+	ansible-playbook -i ./scripts/ansible/hosts.txt ./scripts/ansible/git-pull.yml
+
+ansible-install-go:
+	ansible-playbook -i ./scripts/ansible/hosts.txt ./scripts/ansible/install-go.yml

@@ -1,0 +1,19 @@
+---
+- name: "Git clone Shortener"
+  hosts: "web"
+  gather_facts: "no"
+  vars:
+    - REPOSITORY: "https://github.com/u8views/go-url-shortener.git"
+    - DESTINATION: "/var/go/shortener"
+
+  tasks:
+    - name: "Ensure directory {{ DESTINATION }} exists"
+      ansible.builtin.file:
+        path: "{{ DESTINATION }}"
+        state: "directory"
+
+    - name: "Git pull repository {{ REPOSITORY }}"
+      ansible.builtin.git:
+        repo: "{{ REPOSITORY }}"
+        version: "1-main"
+        dest: "{{ DESTINATION }}"
