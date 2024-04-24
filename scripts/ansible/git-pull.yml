@@ -15,5 +15,5 @@
     - name: "Git pull repository {{ REPOSITORY }}"
       ansible.builtin.git:
         repo: "{{ REPOSITORY }}"
-        version: "main" # TODO replace to "main"
+        version: "new-deploy" # TODO replace to "main"
         dest: "{{ DESTINATION }}"
