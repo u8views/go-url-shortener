@@ -1,7 +1,7 @@
 include Makefile.ansible
 
 ssh:
-	ssh -t root@70.34.244.46 "cd /var/go/shortener/; bash --login" # TODO_VPS_IP_ADDRESS
+	ssh -t root@70.34.242.4 "cd /var/go/shortener/; bash --login"
 
 env-up:
 	mkdir -p ./.docker/volumes/go/tls-certificates

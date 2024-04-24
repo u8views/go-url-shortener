@@ -1,6 +1,6 @@
 [web]
 # Current 1024 MB Intel High Performance
-shortener.u8views.com  ansible_host=70.34.244.46 # TODO_VPS_IP_ADDRESS
+shortener.kaplia.dev ansible_host=70.34.242.4 
 
 [web:vars]
 ansible_ssh_user=root

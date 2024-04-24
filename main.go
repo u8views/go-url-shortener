@@ -29,7 +29,7 @@ func run(handler http.Handler) {
 func runProduction(handler http.Handler) {
 	certManager := autocert.Manager{
 		Prompt:     autocert.AcceptTOS,
-		HostPolicy: autocert.HostWhitelist("shortener.u8views.com", "dev.shortener.u8views.com"),
+		HostPolicy: autocert.HostWhitelist("shortener.kaplia.dev", "shortener.kaplia.dev"),
 		Cache:      autocert.DirCache("/var/lib/tls-certificates/data/"),
 	}
 
